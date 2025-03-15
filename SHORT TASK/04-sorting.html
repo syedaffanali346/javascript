@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>sort</button>
+    <p id="para" style="font-size: 50px;"></p>
+</body>
+</html>
+
+<script>
+    const array = ["Affan","Zaid","Umar","Noman","Rayyan","Bahadur","Chacha"];
+    let para = document.querySelector("#para");
+    let btn = document.querySelector("button");
+    const lowToGre = array.toSorted();//Lower to greater
+    const greToLow = lowToGre.toReversed();//Greater to lower
+
+    para.innerText = array;
+
+    let sortedValue = lowToGre;
+    btn.addEventListener("click",()=>{
+        if (sortedValue == lowToGre) {
+            sortedValue = greToLow;
+            para.innerText = greToLow;
+        }else{
+            sortedValue = lowToGre;
+            para.innerText = lowToGre;
+        }
+        console.log(sortedValue);
+    })
+    
+</script>

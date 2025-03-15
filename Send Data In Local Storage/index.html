@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send data in local storage</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+        }
+
+        .formbold-main-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 48px;
+        }
+
+        .formbold-form-wrapper {
+            margin: 0 auto;
+            max-width: 550px;
+            width: 100%;
+            background: white;
+        }
+
+        .formbold-form-title {
+            margin-bottom: 40px;
+        }
+
+        .formbold-form-title h3 {
+            color: #07074D;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 35px;
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .formbold-form-title p {
+            font-size: 16px;
+            line-height: 24px;
+            color: #536387;
+            width: 70%;
+        }
+
+        .formbold-form-input {
+            text-align: center;
+            width: 100%;
+            padding: 14px 22px;
+            border-radius: 6px;
+            border: 1px solid #DDE3EC;
+            background: #FAFAFA;
+            font-weight: 500;
+            font-size: 16px;
+            color: #536387;
+            outline: none;
+            resize: none;
+        }
+
+        .formbold-form-input:focus {
+            border-color: #6a64f1;
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .formbold-btn {
+            text-align: center;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+            padding: 14px 25px;
+            border: none;
+            font-weight: 500;
+            background-color: #6A64F1;
+            color: white;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .formbold-btn:hover {
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-left: 5%;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            margin-top: 20px;
+            width: 23%;
+            padding: 2px 16px;
+            /* text-align: center; */
+        }
+
+        .container h4,p{
+            padding: 5px 0 5px 15px;
+        }
+        .container p{
+            padding-left: 30px;
+        }
+
+        .deleteBtn{
+            text-align: center;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+            padding: 14px 25px;
+            border: none;
+            font-weight: 500;
+            background-color: #6A64F1;
+            color: white;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .deleteBtn:hover {
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+            <div class="formbold-form-title">
+                <h3>Form</h3>
+            </div>
+            <form>
+                <input type="text" name="uname" id="name" placeholder="Enter your full name" class="formbold-form-input"
+                    required /> <br><br>
+
+                <input type="email" name="uemail" id="email" placeholder="Enter your email address"
+                    class="formbold-form-input" required /> <br><br>
+
+                <input type="text" name="uphone" id="phone" placeholder="Enter your phone number"
+                    class="formbold-form-input" required />
+
+                <button class="formbold-btn">
+                    Save
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="formbold-form-title">
+        <h3>Inserted Data</h3>
+    </div>
+
+    <div class="card">
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

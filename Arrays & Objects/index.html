@@ -1,0 +1,66 @@
+<script>
+    let stu = [
+    [
+        ["1","affan"],
+        ["2","Ammar"]
+    ],
+    [
+        ["3","Hassan"],
+        ["4","Haziq"]
+    ],
+    [
+        ["5","Rehan"],
+        ["6","Rayyan"]
+    ]
+];
+    for (let i = 0; i < stu.length; i++) {
+        for (let j = 0; j < stu[i].length; j++) {
+            for (let k = 0; k < stu[i][j].length; k++) {
+                // console.log(stu[i][j][k]);   
+            }
+        }
+    }
+
+    let vegetables = ["Tomato","Potato","Onion"];
+    let fruits = ["Mango","Banana","Apple"];
+    // vegetables.push(fruits); // it insert in onriginal array
+    //let allThings = vegetables.concat(fruits); // concat gives copy of array
+    let allThings = [...vegetables, ...fruits]; //spread operator
+    // console.log(allThings);
+    let arr3 = [vegetables,fruits];
+    console.log(arr3);
+
+
+    //const obj = new Object() this is created with constructor --- or ye singleton object hota he
+    //this is object literal ---- ye non-singleton object he
+    const human = {
+        eyeColor : "brown",
+        organs : ["Brain","Lungs","Hands"],
+        ability : function () {
+            // console.log("Can Speak");
+        }
+    }
+
+    human.ability();
+    // console.log(human.eyeColor);        
+
+    const myFun = {
+        likho : (type)=>{
+            // console.log(type);
+        }
+    }
+
+    myFun.likho("my console.log");
+    myFun.likho("Affan Parhlo");
+
+    let mySymbol = Symbol("key");
+    const obj = {
+        name:"affan",
+        [mySymbol]:"myKey1"
+    }
+    // console.log(obj.name)
+    // console.log(obj["name"])
+    // console.log(obj[mySymbol])
+    //console.log(obj.mySymbol) //symbol datatype ko is tarah access nhi karskte
+    
+</script>

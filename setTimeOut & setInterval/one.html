@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>setTimeOut</h1> -->
+    <p>This is clearTimeOut function, click the button for clearing</p>
+    <button>click here</button>
+</body>
+<script>
+    setTimeout(()=>{
+        console.log("hellow world!");
+    },1000)
+
+    const myText = ()=>{
+        console.log("Affan");
+    }
+    setTimeout(myText,2000);
+
+    // const changingText = ()=>{
+    //     document.querySelector("h1").innerText = "learning setTimeOut in Javascript!";
+    // }
+    // setTimeout(changingText,3000);
+
+    const changeMe = setTimeout(()=>{
+        document.querySelector("p").innerText = "clearTimeOut function is not excuted, click the button before 3 second for clearing!";
+    },3000);
+    document.querySelector("button").addEventListener("click",()=>{
+        clearTimeout(changeMe);
+        setTimeout(()=>{
+            console.log("stopped!");
+        },3000)
+    })
+</script>
+</html>

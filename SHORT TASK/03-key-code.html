@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #print{
+            display: flex;
+            justify-content: center;
+        }
+        #print table{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="print">
+        Press any key and watch its code
+    </div>
+</body>
+<script>
+    const div = document.querySelector("#print");
+    window.document.addEventListener("keypress", (e) => {
+        div.innerHTML = `
+            <div>
+                <table>
+                    <tr>
+                        <th>key</th>
+                        <th>keyCode</th>
+                        <th>Code</th>
+                    </tr>
+                    <tr>
+                        <td>${e.key == " " ? "Space" : e.key}</td>
+                        <td>${e.keyCode}</td>
+                        <td>${e.code}</td>
+                    </tr>
+                </table>    
+            </div>
+        `;
+    })
+</script>
+
+</html>

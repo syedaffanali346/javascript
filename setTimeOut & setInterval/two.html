@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>setInterval</h1>
+    <button>start</button>
+    <button>stop</button>
+    <script>
+        const reference = (str)=>{
+            console.log("Affan",str,Date.now())
+        }
+        const btns = document.querySelectorAll("button");
+        let sayName;
+        btns.forEach((btn)=>{
+            btn.addEventListener("click",(evt)=>{
+                if (evt.target.innerHTML === "start") {
+                    console.log("start");
+                    sayName = setInterval(reference,1000,"Ali");
+                }else{
+                    console.log("stop");
+                    clearInterval(sayName);
+                }
+            })
+        });
+    </script>
+</body>
+</html>

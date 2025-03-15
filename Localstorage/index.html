@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+
+    <script>
+        let p1 = document.querySelector("#p1");
+        let p2 = document.querySelector("#p2");
+        let p3 = document.querySelector("#p3");
+
+        let str = "affan";
+        let arr = ["ammar","hassan","zaid"];
+        let obj = {
+            name:"bakar",
+            age:18
+        }
+        
+        //Insert values in localstorage
+        localStorage.setItem("string",str);
+        localStorage.setItem("array",arr);
+        localStorage.setItem("object",JSON.stringify(obj));
+
+        //Print values from localstorage
+        let locStr = localStorage.getItem("string");
+        p1.innerHTML = locStr;
+        console.log(locStr);
+
+        let locArr = localStorage.getItem("array");
+        p2.innerHTML = locArr;
+        console.log(locArr);
+
+        let locObj = JSON.parse(localStorage.getItem("object"));
+        p3.innerHTML = JSON.stringify(locObj);
+        console.log(locObj);
+    </script>
+</body>
+</html>
